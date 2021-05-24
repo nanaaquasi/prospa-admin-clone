@@ -1,13 +1,39 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "BR Firma Regular";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "BR Firma Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BR Firma Regular"), url("BR Firma Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BR Firma Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BR Firma Medium"), url("BR Firma Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BR Firma SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BR Firma SemiBold"), url("BR Firma SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BR Firma Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BR Firma Bold"), url("BR Firma Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BR Firma Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("BR Firma Black"), url("BR Firma Black.woff") format("woff");
 }

@@ -1,13 +1,17 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
+import SignInForm from "../components/SignInForm";
+import SignUpForm from "../components/SignUpForm";
 import AuthPage from "../pages/AuthPage";
 import Dashboard from "../pages/Dashboard";
 
 const MainNavigator = () => {
   return (
     <Switch>
-      <Route path="/" />
-      <Route path="/dashboard" />
+      <Redirect exact from="/" to="/signin" />
+      <Route path="/signup" component={SignUpForm} />
+      <Route path="/signin" component={SignInForm} />
+      <Route path="/dashboard" component={Dashboard} />
     </Switch>
   );
 };

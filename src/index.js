@@ -3,14 +3,28 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
+
+const customTheme = extendTheme({
+  fonts: {
+    body: "BRFirma Regular, sans-serif",
+  },
+  styles: {
+    global: {
+      body: {
+        fontSize: "16px",
+        color: "rgb(27, 0, 59)",
+      },
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       {/* <ScrollToTop /> */}
-      <ChakraProvider resetCSS>
+      <ChakraProvider resetCSS theme={customTheme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>

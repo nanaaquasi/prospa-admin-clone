@@ -2,7 +2,6 @@ import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import SignInForm from "../components/SignInForm";
 import SignUpForm from "../components/SignUpForm";
-import AuthPage from "../pages/AuthPage";
 import Dashboard from "../pages/Dashboard";
 
 const MainNavigator = () => {

@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Text, Flex, Stack, Image } from "@chakra-ui/react";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StoryBar from "../components/StoryBar";
 import AuthImage from "../assets/img/auth-img.png";
-import AuthNavigator from "../navigation/AuthNavigator";
 import { useWindowDimensions } from "../utils/hooks";
 import logo from "../assets/img/logo.svg";
 

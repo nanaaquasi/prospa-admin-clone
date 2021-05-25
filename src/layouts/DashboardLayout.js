@@ -6,7 +6,6 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { IconContext } from "react-icons/lib";
 import SideBar from "../components/SideBar";
 import { useWindowDimensions } from "../utils/hooks";
-// import avatar from "../assets/img/avatar.png";
 
 const DashboardLayout = ({ show, setShow, toggle, children }) => {
   const { width } = useWindowDimensions();

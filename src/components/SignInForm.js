@@ -7,7 +7,7 @@ import styles from "./Form.module.css";
 const SignInForm = () => {
   const history = useHistory();
   return (
-    <AuthLayout>
+    <AuthLayout bg="#1C1335">
       <Stack align="center">
         <Flex
           alignSelf="flex-end"
@@ -32,7 +32,7 @@ const SignInForm = () => {
             </Link>
           </Flex>
         </Flex>
-        <Stack w="40%" mx="auto">
+        <Stack w={["100%", "40%"]} mx="auto">
           <Text fontSize="28px" fontWeight="600">
             Welcome back to prospa
           </Text>

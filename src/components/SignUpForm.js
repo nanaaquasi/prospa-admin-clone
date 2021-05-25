@@ -28,7 +28,7 @@ const SignUpForm = () => {
   const [expandedIndex, setExpandedIndex] = React.useState(0);
 
   return (
-    <AuthLayout>
+    <AuthLayout bg="#7E51FF">
       <Stack align="center">
         <Flex
           alignSelf="flex-end"
@@ -67,7 +67,7 @@ const SignUpForm = () => {
           </Flex>
         </Flex>
         {formStep === 1 && (
-          <Stack w="40%" mx="auto">
+          <Stack w={["100%", "40%"]} mx="auto">
             <Text fontSize="28px" fontWeight="600">
               Create your account
             </Text>
@@ -115,7 +115,7 @@ const SignUpForm = () => {
           </Stack>
         )}
         {formStep === 2 && (
-          <Box w="40%">
+          <Box w={["100%", "40%"]}>
             <form>
               <Stack mx="auto">
                 <Text fontSize="28px" fontWeight="600" lineHeight="1">

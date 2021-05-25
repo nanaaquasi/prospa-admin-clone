@@ -1,3 +1,8 @@
+import BankIcon from "../assets/img/bank-charges.png";
+import InternetIcon from "../assets/img/internet.png";
+import MarketingIcon from "../assets/img/marketing.png";
+import TransferIcon from "../assets/img/transfer.png";
+
 export const dialCodes = [
   {
     name: "Ghana",
@@ -474,5 +479,36 @@ export const accountTypes = [
       "Send and receive transfers from all Nigerian banks",
       "Tools for managing your business",
     ],
+  },
+];
+
+export const cashOutflow = [
+  {
+    type: "Bank Fees",
+    amount: "-N 250,000",
+    progress: 90,
+    icon: BankIcon,
+    bg: "#ea02b0",
+  },
+  {
+    type: "Internet",
+    amount: "-N 250,000",
+    progress: 70,
+    icon: InternetIcon,
+    bg: "#17edd5",
+  },
+  {
+    type: "Marketing",
+    amount: "-N 250,000",
+    progress: 40,
+    icon: MarketingIcon,
+    bg: "#c155ff",
+  },
+  {
+    type: "Transfer",
+    amount: "-N 250,000",
+    progress: 20,
+    icon: TransferIcon,
+    bg: "#00ed45",
   },
 ];

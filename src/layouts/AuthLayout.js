@@ -5,7 +5,7 @@ import StoryBar from "../components/StoryBar";
 import AuthImage from "../assets/img/auth-img.png";
 import AuthNavigator from "../navigation/AuthNavigator";
 
-const AuthPage = () => {
+const AuthLayout = (props) => {
   return (
     <Box d="flex" w="100%" h="100%" flexDirection={["column", "row"]}>
       <Flex
@@ -61,10 +61,10 @@ const AuthPage = () => {
         bg="#fff"
         direction="column"
       >
-        <AuthNavigator />
+        {props.children}
       </Flex>
     </Box>
   );
 };
 
-export default AuthPage;
+export default AuthLayout;

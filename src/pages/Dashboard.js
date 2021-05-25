@@ -27,7 +27,7 @@ const Dashboard = () => {
             <Text fontSize="24px" fontWeight="600">
               Welcome back, Kathy
             </Text>
-            <Text fontSize="16px" fontWeight="400" w={["90%", "100%"]}>
+            <Text fontSize="16px" fontWeight="400" w={["100%", "100%"]}>
               Here's what has been happening in the last
               <span
                 style={{
@@ -196,8 +196,8 @@ const Dashboard = () => {
                       {cash.type}
                     </Text>
                   </Flex>
-                  <Stack flexBasis={["62%", "60%"]} spacing="1">
-                    <Text>{cash.amount}</Text>
+                  <Stack flexBasis={["62%", "60%"]} spacing="1" ml={["6", "1"]}>
+                    <Text fontSize={["13px", "14px"]}>{cash.amount}</Text>
                     <Progress
                       value={cash.progress}
                       colorScheme="yellow"

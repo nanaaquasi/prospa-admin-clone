@@ -69,7 +69,7 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
           </Flex>
         </Flex>
         <Flex
-          flexBasis={["88%%", "88%"]}
+          flexBasis={["88%", "88%"]}
           bg="#f4f8fb"
           px={["4", "20"]}
           pt={["4", "10"]}

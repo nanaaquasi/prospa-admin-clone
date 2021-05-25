@@ -56,7 +56,7 @@ const Dashboard = () => {
           <Flex
             direction="column"
             justify="space-between"
-            height="200px"
+            height={["auto", "200px"]}
             shadow="md"
             bg="#fff"
             flexBasis="49%"
@@ -122,7 +122,7 @@ const Dashboard = () => {
         </Flex>
         <Flex direction={["column", "row"]}>
           <Flex
-            flexBasis="55%"
+            flexBasis={["", "55%"]}
             direction="column"
             p="6"
             // justify="space-between"
@@ -166,7 +166,7 @@ const Dashboard = () => {
           </Flex>
           <Box flexBasis="2%"></Box>
           <Flex
-            flexBasis="45%"
+            flexBasis={["", "45%"]}
             direction="column"
             // justify="space-between"
             p="6"

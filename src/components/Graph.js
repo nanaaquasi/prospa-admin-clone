@@ -22,7 +22,7 @@ const Graph = () => {
     <Line
       data={graphData}
       options={{
-        responsive: true,
+        // responsive: true,
         title: {
           display: false,
           text: "Money in and out per month",

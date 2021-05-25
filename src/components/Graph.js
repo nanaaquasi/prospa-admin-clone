@@ -18,15 +18,6 @@ const Graph = () => {
     ],
   };
 
-  const options = {
-    scales: {
-      y: {
-        suggestedMin: 0,
-        suggestedMax: 20,
-      },
-    },
-  };
-
   return (
     <Line
       data={graphData}

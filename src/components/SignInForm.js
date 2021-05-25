@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthLayout from "../layouts/AuthLayout";

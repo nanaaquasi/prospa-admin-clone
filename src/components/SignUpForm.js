@@ -17,7 +17,6 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthLayout from "../layouts/AuthLayout";
 import { accountTypes, dialCodes } from "../utils/mock";
-import CustomAccordion from "./Accordion";
 import styles from "./Form.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import CheckIcon from "./svgs/CheckIcon";

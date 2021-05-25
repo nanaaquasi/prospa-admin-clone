@@ -23,7 +23,7 @@ const Dashboard = () => {
     <DashboardLayout show={show} toggle={handleToggle} setShow={setShow}>
       <Stack spacing="8">
         <Flex
-          justify="space-between"
+          justify={["start", "space-between"]}
           direction={["column", "row"]}
           flexWrap={["nowrap", "wrap"]}
         >
@@ -60,7 +60,6 @@ const Dashboard = () => {
           <Flex
             direction="column"
             justify="space-between"
-            // height={["auto", "200px"]}
             shadow="md"
             bg="#fff"
             flexBasis={["100%", "49%"]}
@@ -99,6 +98,7 @@ const Dashboard = () => {
             flexBasis={["100%", "49%"]}
             p="4"
             mt={["4", "0"]}
+            w="100%"
           >
             <Flex justify="space-between" align="center">
               <Stack>
@@ -124,9 +124,12 @@ const Dashboard = () => {
             </Text>
           </Flex>
         </Flex>
+
+        {/* ANALYTICS - JUNE SUMMARY        */}
+
         <Flex direction={["column", "row"]} flexWrap={["nowrap", "wrap"]}>
           <Flex
-            flexBasis={["100%", "55%"]}
+            flexBasis={["auto", "55%"]}
             direction="column"
             p="6"
             shadow="md"
@@ -167,8 +170,9 @@ const Dashboard = () => {
             </Box>
           </Flex>
           <Box flexBasis="2%"></Box>
+
           <Flex
-            flexBasis={["100%", "43%"]}
+            flexBasis={["auto", "43%"]}
             direction="column"
             // justify="space-between"
             p="6"
@@ -212,6 +216,8 @@ const Dashboard = () => {
             </Stack>
           </Flex>
         </Flex>
+
+        {/* RECENT TRANSACTIONS SECTION        */}
         <Stack spacing="6" p="6" shadow="md" bg="#fff" w="100%">
           <Flex justify="space-between" align="center" mb="4">
             <Text fontWeight="700" fontSize="17px">

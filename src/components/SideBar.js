@@ -1,7 +1,5 @@
 import {
-  Avatar,
   Box,
-  Button,
   Flex,
   Image,
   Menu,

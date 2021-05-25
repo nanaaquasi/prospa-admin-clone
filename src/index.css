@@ -1,39 +1,39 @@
 body {
   margin: 0;
-  font-family: "BR Firma Regular";
+  font-family: "BRFirma Regular" sans-serif;
 }
 
 @font-face {
-  font-family: "BR Firma Regular";
+  font-family: "BRFirma Regular";
   font-style: normal;
   font-weight: normal;
-  src: local("BR Firma Regular"), url("BR Firma Regular.woff") format("woff");
+  src: url("assets/fonts/BR Firma Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "BR Firma Medium";
+  font-family: "BRFirma Medium";
   font-style: normal;
   font-weight: normal;
-  src: local("BR Firma Medium"), url("BR Firma Medium.woff") format("woff");
+  src: url("assets/fonts/BR Firma Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "BR Firma SemiBold";
+  font-family: "BRFirma SemiBold";
   font-style: normal;
   font-weight: normal;
-  src: local("BR Firma SemiBold"), url("BR Firma SemiBold.woff") format("woff");
+  src: url("assets/fonts/BR Firma SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "BR Firma Bold";
+  font-family: "BRFirma Bold";
   font-style: normal;
   font-weight: normal;
-  src: local("BR Firma Bold"), url("BR Firma Bold.woff") format("woff");
+  src: url("assets/fonts/BR Firma Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "BR Firma Black";
   font-style: normal;
   font-weight: normal;
-  src: local("BR Firma Black"), url("BR Firma Black.woff") format("woff");
+  src: url("assets/fonts/BR Firma Black.woff") format("woff");
 }

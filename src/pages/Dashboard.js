@@ -21,7 +21,7 @@ const Dashboard = () => {
   const handleToggle = () => setShow(!show);
   return (
     <DashboardLayout show={show} toggle={handleToggle} setShow={setShow}>
-      <Stack spacing="8">
+      <Stack spacing="8" h="100%">
         <Flex justify="space-between" direction={["column", "row"]}>
           <Stack spacing={["2", "0"]}>
             <Text fontSize="24px" fontWeight="600">

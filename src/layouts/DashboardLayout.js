@@ -34,12 +34,13 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
         overflowY="scroll"
       >
         <Flex
-          flexBasis={["10%", "12%"]}
+          // height={["100px", "200px"]}
           shadow="sm"
           align="center"
           px={["6", "20"]}
           justify="space-between"
           py="4"
+          // border="2px solid red"
         >
           {!isMobile ? (
             <Text fontSize="18px" fontWeight="700" color="rgb(131, 151, 171)">
@@ -69,7 +70,8 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
           </Flex>
         </Flex>
         <Box
-          flexBasis={["90%", "88%"]}
+          // flexBasis={["90%", "88%"]}
+          flex="1"
           bg="#f4f8fb"
           px={["4", "20"]}
           pt={["4", "10"]}

@@ -12,7 +12,7 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
 
   const isMobile = width <= 650;
   return (
-    <Flex w="100%" h="100vh">
+    <Flex w="100%">
       <Stack
         flexBasis="19.5%"
         bg="white"
@@ -29,7 +29,7 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
       <Flex
         flexBasis={["100%", "81.5%"]}
         direction="column"
-        h={["100vh", "100vh"]}
+        h={["", "100vh"]}
         w="100%"
         overflowY="scroll"
       >
@@ -76,7 +76,7 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
           direction="column"
           pb="20"
           onClick={() => setShow(false)}
-          h="100%"
+          // h="100%"
         >
           {children}
         </Flex>

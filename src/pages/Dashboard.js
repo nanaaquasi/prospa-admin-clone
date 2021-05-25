@@ -85,7 +85,11 @@ const Dashboard = () => {
               <Image src={CardIcon} />
             </Flex>
           </Flex>
-          <Text mt="10" fontSize={["26px", "32px"]} color="rgb(28, 19, 53)">
+          <Text
+            mt={["6", "10"]}
+            fontSize={["26px", "32px"]}
+            color="rgb(28, 19, 53)"
+          >
             N 814,800.45
           </Text>
         </Flex>
@@ -120,7 +124,11 @@ const Dashboard = () => {
               <Image src={CardIconAlt} />
             </Flex>
           </Flex>
-          <Text mt="10" fontSize={["26px", "32px"]} color="rgb(28, 19, 53)">
+          <Text
+            mt={["6", "10"]}
+            fontSize={["26px", "32px"]}
+            color="rgb(28, 19, 53)"
+          >
             N 814,800.45
           </Text>
         </Flex>

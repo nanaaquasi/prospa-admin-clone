@@ -92,7 +92,7 @@ const Dashboard = () => {
             height={["auto", "200px"]}
             shadow="md"
             bg="#fff"
-            flexBasis="49%"
+            flexBasis={["", "49%"]}
             p="4"
             mt={["4", "0"]}
           >

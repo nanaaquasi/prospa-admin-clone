@@ -21,8 +21,12 @@ const Dashboard = () => {
   const handleToggle = () => setShow(!show);
   return (
     <DashboardLayout show={show} toggle={handleToggle} setShow={setShow}>
-      <Stack spacing="8" h="100%">
-        <Flex justify="space-between" direction={["column", "row"]}>
+      <Stack spacing="8">
+        <Flex
+          justify="space-between"
+          direction={["column", "row"]}
+          flexWrap={["nowrap", "wrap"]}
+        >
           <Stack spacing={["2", "0"]}>
             <Text fontSize="24px" fontWeight="600">
               Welcome back, Kathy
@@ -52,14 +56,14 @@ const Dashboard = () => {
             Add a sub account
           </Button>
         </Flex>
-        <Flex direction={["column", "row"]}>
+        <Flex direction={["column", "row"]} flexWrap={["nowrap", "wrap"]}>
           <Flex
             direction="column"
             justify="space-between"
-            height={["auto", "200px"]}
+            // height={["auto", "200px"]}
             shadow="md"
             bg="#fff"
-            flexBasis="49%"
+            flexBasis={["100%", "49%"]}
             p="4"
           >
             <Flex justify="space-between" align="center">
@@ -81,18 +85,18 @@ const Dashboard = () => {
                 <Image src={CardIcon} />
               </Flex>
             </Flex>
-            <Text fontSize={["26px", "36px"]} color="rgb(28, 19, 53)">
-              N814,800.45
+            <Text mt="10" fontSize={["26px", "32px"]} color="rgb(28, 19, 53)">
+              N 814,800.45
             </Text>
           </Flex>
-          <Box flexBasis="2%"></Box>
+          <Box flexBasis={["2%"]}></Box>
           <Flex
             direction="column"
             justify="space-between"
-            height={["auto", "200px"]}
+            flexWrap={["nowrap", "wrap"]}
             shadow="md"
             bg="#fff"
-            flexBasis={["", "49%"]}
+            flexBasis={["100%", "49%"]}
             p="4"
             mt={["4", "0"]}
           >
@@ -115,18 +119,16 @@ const Dashboard = () => {
                 <Image src={CardIconAlt} />
               </Flex>
             </Flex>
-            <Text fontSize={["26px", "36px"]} color="rgb(28, 19, 53)">
-              N814,800.45
+            <Text mt="10" fontSize={["26px", "32px"]} color="rgb(28, 19, 53)">
+              N 814,800.45
             </Text>
           </Flex>
         </Flex>
-        <Flex direction={["column", "row"]}>
+        <Flex direction={["column", "row"]} flexWrap={["nowrap", "wrap"]}>
           <Flex
-            flexBasis={["", "55%"]}
+            flexBasis={["100%", "55%"]}
             direction="column"
             p="6"
-            // justify="space-between"
-            height="auto"
             shadow="md"
             bg="#fff"
             mb={["6", "0"]}
@@ -160,13 +162,13 @@ const Dashboard = () => {
                 </Text>
               </Stack>
             </Flex>
-            <Box w="100%" h="100%" my="4" pb="6">
+            <Box w="100%" my="4" pb="6">
               <Graph />
             </Box>
           </Flex>
           <Box flexBasis="2%"></Box>
           <Flex
-            flexBasis={["", "45%"]}
+            flexBasis={["100%", "43%"]}
             direction="column"
             // justify="space-between"
             p="6"

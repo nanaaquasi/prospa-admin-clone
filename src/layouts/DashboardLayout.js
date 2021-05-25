@@ -29,12 +29,12 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
       <Flex
         flexBasis={["100%", "81.5%"]}
         direction="column"
-        h={["100vh", "100vh"]}
+        h={["auto", "100vh"]}
         w="100%"
         overflowY="scroll"
       >
         <Flex
-          flexBasis={["", "12%"]}
+          flexBasis={["100%", "12%"]}
           shadow="sm"
           align="center"
           px={["6", "20"]}
@@ -69,10 +69,10 @@ const DashboardLayout = ({ show, setShow, toggle, children }) => {
           </Flex>
         </Flex>
         <Flex
-          flexBasis={["", "88%"]}
+          flexBasis={["100%", "88%"]}
           bg="#f4f8fb"
           px={["4", "20"]}
-          pt="10"
+          pt={["4", "10"]}
           direction="column"
           pb="20"
           onClick={() => setShow(false)}

@@ -1,12 +1,10 @@
 import {
   Accordion,
   AccordionButton,
-  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
   Flex,
-  Input,
   Stack,
   Text,
   List,
@@ -19,7 +17,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import { accountTypes, dialCodes } from "../utils/mock";
 import styles from "./Form.module.css";
 import { IoIosArrowBack } from "react-icons/io";
-import CheckIcon from "./svgs/CheckIcon";
+import CheckIcon from "./svg/CheckIcon";
 
 const SignUpForm = () => {
   const history = useHistory();
@@ -193,14 +191,6 @@ const SignUpForm = () => {
                           </>
                         )}
                       </AccordionItem>
-
-                      //   <CustomAccordion
-                      //     index={idx}
-                      //     key={idx}
-                      //     title={type.title}
-                      //     description={type.description}
-                      //     content={type.types}
-                      //   />
                     ))}
                   </Accordion>
                 </Box>

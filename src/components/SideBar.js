@@ -18,6 +18,36 @@ import TransferIcon from "../assets/img/transfer-alt.png";
 import MgtIcon from "../assets/img/management.png";
 import InvoiceIcon from "../assets/img/invoice.png";
 import logo from "../assets/img/logo-alt.svg";
+import { motion } from "framer-motion";
+
+const variants = {
+  open: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { stiffness: 1000, velocity: -50 },
+    },
+  },
+  closed: {
+    x: -100,
+    opacity: 0,
+    transition: {
+      x: { stiffness: 1000 },
+    },
+  },
+};
+
+const stagger = {
+  open: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
+
+const MotionStack = motion(Stack);
+const MotionFlex = motion(Flex);
 
 const SideBar = () => {
   const sideNavLinks = [
@@ -81,9 +111,22 @@ const SideBar = () => {
         </MenuList>
       </Menu>
       <Box h="1px" w="100%" bg="#DCE7F2" my="4"></Box>
-      <Stack spacing="10" mt="8" px="4">
+      <MotionStack
+        initial="closed"
+        animate="open"
+        variants={stagger}
+        spacing="10"
+        mt="8"
+        px="4"
+      >
         {sideNavLinks.map((navLink, idx) => (
-          <Flex align="center">
+          <MotionFlex
+            variants={variants}
+            align="center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            cursor="pointer"
+          >
             <Image src={navLink.icon} />
             <Text
               fontWeight="600"
@@ -92,9 +135,9 @@ const SideBar = () => {
             >
               {navLink.title}
             </Text>
-          </Flex>
+          </MotionFlex>
         ))}
-      </Stack>
+      </MotionStack>
       <Box mt={["72", "60"]}>
         <Image src={logo} />
       </Box>

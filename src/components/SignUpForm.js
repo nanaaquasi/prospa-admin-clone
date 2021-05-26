@@ -18,6 +18,27 @@ import { accountTypes, dialCodes } from "../utils/mock";
 import styles from "./Form.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import CheckIcon from "./svg/CheckIcon";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+const MotionStack = motion(Stack);
+
+const variants = {
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -50 },
+    },
+  },
+  leave: {
+    y: -100,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
 
 const SignUpForm = () => {
   const history = useHistory();
@@ -65,7 +86,13 @@ const SignUpForm = () => {
           </Flex>
         </Flex>
         {formStep === 1 && (
-          <Stack w={["100%", "40%"]} mx="auto">
+          <MotionStack
+            initial="leave"
+            animate="enter"
+            variants={variants}
+            w={["100%", "40%"]}
+            mx="auto"
+          >
             <Text fontSize="28px" fontWeight="600">
               Create your account
             </Text>
@@ -110,10 +137,15 @@ const SignUpForm = () => {
                 </button>
               </form>
             </Box>
-          </Stack>
+          </MotionStack>
         )}
         {formStep === 2 && (
-          <Box w={["100%", "40%"]}>
+          <MotionBox
+            initial="leave"
+            animate="enter"
+            variants={variants}
+            w={["100%", "40%"]}
+          >
             <form>
               <Stack mx="auto">
                 <Text fontSize="28px" fontWeight="600" lineHeight="1">
@@ -195,14 +227,14 @@ const SignUpForm = () => {
                   </Accordion>
                 </Box>
               </Stack>
-              <button
-                className={styles.Button}
-                onClick={() => history.push("/dashboard")}
-              >
-                Next
-              </button>
             </form>
-          </Box>
+            <button
+              className={styles.Button}
+              onClick={() => history.push("dashboard")}
+            >
+              Next
+            </button>
+          </MotionBox>
         )}
       </Stack>
     </AuthLayout>

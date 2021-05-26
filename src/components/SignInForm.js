@@ -1,8 +1,39 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthLayout from "../layouts/AuthLayout";
 import styles from "./Form.module.css";
+
+const MotionStack = motion(Stack);
+const MotionText = motion(Text);
+const MotionBox = motion(Box);
+
+const variants = {
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -50 },
+    },
+  },
+  leave: {
+    y: -50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
+
+const stagger = {
+  enter: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+  },
+  leave: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+};
 
 const SignInForm = () => {
   const history = useHistory();
@@ -32,14 +63,20 @@ const SignInForm = () => {
             </Link>
           </Flex>
         </Flex>
-        <Stack w={["100%", "40%"]} mx="auto">
-          <Text fontSize="28px" fontWeight="600">
+        <MotionStack
+          initial="leave"
+          animate="enter"
+          variants={variants}
+          w={["100%", "40%"]}
+          mx="auto"
+        >
+          <MotionText variants={stagger} fontSize="28px" fontWeight="600">
             Welcome back to prospa
-          </Text>
-          <Text color="rgb(131, 151, 171)">
+          </MotionText>
+          <Text variants={stagger} color="rgb(131, 151, 171)">
             An account, with powerful, personalised tools all in one place
           </Text>
-          <Box w="100%">
+          <MotionBox variants={stagger} w="100%">
             <form>
               <input
                 type="email"
@@ -59,8 +96,8 @@ const SignInForm = () => {
             >
               Next
             </button>
-          </Box>
-        </Stack>
+          </MotionBox>
+        </MotionStack>
       </Stack>
     </AuthLayout>
   );

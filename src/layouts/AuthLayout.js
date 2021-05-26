@@ -5,13 +5,25 @@ import StoryBar from "../components/StoryBar";
 import AuthImage from "../assets/img/auth-img.png";
 import { useWindowDimensions } from "../utils/hooks";
 import logo from "../assets/img/logo.svg";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+const MotionStack = motion(Stack);
 
 const AuthLayout = (props) => {
   const { width } = useWindowDimensions();
 
   const isMobile = width < 600;
   return (
-    <Box d="flex" w="100%" h="100%" flexDirection={["column", "row"]}>
+    <MotionBox
+      exit={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      d="flex"
+      w="100%"
+      h="100%"
+      flexDirection={["column", "row"]}
+    >
       {!isMobile && (
         <Flex
           direction="column"
@@ -29,7 +41,7 @@ const AuthLayout = (props) => {
           </Link>
 
           <StoryBar />
-          <Stack spacing="4" my="10">
+          <MotionStack spacing="4" my="10">
             <Text
               fontSize="32px"
               fontWeight="bold"
@@ -49,7 +61,7 @@ const AuthLayout = (props) => {
               Organise your business finances easily with multiple accounts. No
               limits
             </Text>
-          </Stack>
+          </MotionStack>
           <Box w="250px" h="250px" mb="14">
             <Image w="100%" h="100%" src={AuthImage} alt="Auth Image" />
           </Box>
@@ -69,7 +81,7 @@ const AuthLayout = (props) => {
       >
         {props.children}
       </Flex>
-    </Box>
+    </MotionBox>
   );
 };
 
